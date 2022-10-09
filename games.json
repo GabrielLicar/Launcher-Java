@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Minecraft",
+        "caminho": "/home/...",
+        "icone": "Minecraft.png",
+        "fundo": "BackMinecraft.png"
+    },
+    {
+        "nome": "Counter Strike - GO",
+        "caminho": "/home/...",
+        "icone": "Csgo.png",
+        "fundo": "BackCsgo.png"
+    }, 
+    {
+        "nome": "Discord",
+        "caminho": "/home/...",
+        "icone": "Discord.png",
+        "fundo": "BackDiscord.png"
+    }
+]

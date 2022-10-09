@@ -1,31 +1,45 @@
 package me.nykoo.gui;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import me.nykoo.gui.componentes.Botoes;
+import me.nykoo.gui.componentes.Imagem;
+import me.nykoo.gui.componentes.TelaPanel;
+
 import java.awt.*;
 import java.awt.event.*;
 
-public class LoginPanel extends JPanel implements ActionListener{
-    private JPanel telas;
-    private CardLayout controleTela;
+public class LoginPanel extends TelaPanel{
 
-    public LoginPanel(JPanel telas) {
-        this.telas = telas;
-        this.controleTela = (CardLayout) telas.getLayout();
+    private JTextField txtLogin = new JTextField();
+
+    private Botoes botao;
+
+    public LoginPanel(JPanel telas, JFrame janela) {
+        super(telas, janela);
         JLabel msg = new JLabel("Acesso ao Login");
         
+        
+        txtLogin.setBounds(530, 272, 200, 25);
 
-        JButton botao = new JButton("Sign-in");
+        JTextField txtSenha = new JTextField();
+        txtSenha.setBounds(530, 328, 200, 25);
+        
+        botao = new Botoes("Logar");
         botao.addActionListener(this);
 
         this.add(msg);
         this.add(botao);
+        this.add(txtLogin);
+        this.add(txtSenha);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        controleTela.show(telas, "Tela voltar");
+    public void executeButton(ActionEvent e) {
+        trocarTela("Tela voltar");
     }
     
 }

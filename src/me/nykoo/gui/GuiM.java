@@ -21,7 +21,7 @@ public class GuiM extends JFrame{
         telas.add(mainn, "Tela voltar"); 
 
         this.add(telas);
-        //this.setUndecorated(true);
+        this.setUndecorated(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }

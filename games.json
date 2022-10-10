@@ -1,13 +1,13 @@
 [
     {
         "nome": "Minecraft",
-        "caminho": "/home/...",
+        "caminho": "/usr/bin/flatpak run --branch=stable --arch=x86_64 com.mojang.Minecraft",
         "icone": "Minecraft.png",
         "fundo": "BackMinecraft.png"
     },
     {
         "nome": "Counter Strike - GO",
-        "caminho": "/home/...",
+        "caminho": "/home/gab/Counter-Strike-Global-Offensive",
         "icone": "Csgo.png",
         "fundo": "BackCsgo.png"
     }, 

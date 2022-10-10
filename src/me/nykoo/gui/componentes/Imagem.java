@@ -13,7 +13,7 @@ public class Imagem extends JLabel{
 
     public Imagem(String nome){
         super();
-        ImageIcon icone = new ImageIcon(Imagem.class.getResource("/assets/" + nome + ".png"));
+        ImageIcon icone = new ImageIcon(Imagem.class.getResource("/assets/" + nome));
         setIcon(icone);
         repaint();
     }

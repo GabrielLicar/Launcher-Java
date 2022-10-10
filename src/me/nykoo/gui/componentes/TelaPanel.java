@@ -26,10 +26,10 @@ public class TelaPanel extends JPanel implements ActionListener{
         this.setBackground(Color.decode("#191622"));
         this.setLayout(null);
 
-        Imagem iconeFechar = new Imagem("fechar");
-        iconeFechar.setBounds(1240, 0, 36, 36);
-        Imagem iconeMinimizar = new Imagem("minimizar");
-        iconeMinimizar.setBounds(1200, 0, 36, 36);
+        Imagem iconeFechar = new Imagem("fechar.png");
+        iconeFechar.setBounds(0, 0, 24, 24);
+        Imagem iconeMinimizar = new Imagem("minimizar.png");
+        iconeMinimizar.setBounds(30, 0, 24, 24);
 
         iconeMinimizar.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {

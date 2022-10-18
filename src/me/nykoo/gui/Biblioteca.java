@@ -1,6 +1,7 @@
 package me.nykoo.gui;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -25,11 +26,10 @@ public class Biblioteca extends TelaPanel {
     private JPanel grid;
 
     private Botoes botaoVoltar;
-
+        
     public Biblioteca(JPanel telas, JFrame janela) {
         super(telas, janela);
         this.game = new ArrayList<Games>();
-
         
         grid = new JPanel(new FlowLayout(FlowLayout.LEFT, 22, 22));
         grid.setBackground(Color.decode("#191622"));
@@ -81,7 +81,8 @@ public class Biblioteca extends TelaPanel {
             imagem.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
                     String caminho = games.getCaminho();
-                    executarJogo(caminho);
+                    String nome = games.getNome();
+                    executarJogo(caminho, nome);
                 }
             });
 
@@ -89,16 +90,19 @@ public class Biblioteca extends TelaPanel {
         }
         
     }
+    
 
-    private void executarJogo(String caminho){
+    private void executarJogo(String caminho, String nome){
         File arquivo = new File(caminho);
+        File gaminho = new File(nome);
         String pasta = arquivo.getAbsoluteFile().getParent();
+        String gamin = gaminho.getName();
         //System.out.println(pasta);
+       
         try {
+            JOptionPane.showMessageDialog(null, "Você está abrindo o " + gamin);
             Runtime.getRuntime().exec(caminho, null, new File(pasta));
-            
         } catch (IOException e) {
-            
             e.printStackTrace();
         }
     }
@@ -118,7 +122,6 @@ public class Biblioteca extends TelaPanel {
             }
             reader.close();
         } catch (Exception e) {
-            
             e.printStackTrace();
         }
         return contentArchive.toString();
